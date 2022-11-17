@@ -1,0 +1,154 @@
+.pokemonLink{
+    text-decoration: none;
+    color: inherit;
+}
+
+.pokemons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 396px){
+    .pokemons{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .pokemons{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .pokemons{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.pokemon{
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+.normal{
+    background-color: #cacd99;
+}
+
+.grass{
+    background-color: #46d1b2;
+}
+
+.fire{
+    background-color: #FB6C6C;
+}
+
+.water{
+    background-color: #76BDFD;
+}
+
+.electric{
+    background-color: #FFCF4A;
+}
+
+.ice{
+    background-color: #92fcff;
+}
+
+.ground{   
+    background-color: #dfbf69;
+}
+
+.flying{
+    background-color: #a98ff0;
+}
+
+.poison{
+    background-color: #c750c7;
+}
+
+.fighting{
+    background-color: #d95d57;
+}
+
+.psychic{
+    background-color: #fb6492;
+}
+
+.dark{
+    background-color: #725847;
+}
+
+.rock{
+    background-color: #cdbe79;
+}
+
+.bug{
+    background-color: #b3c322;
+}
+
+.ghost{
+    background-color: #9174c5;
+}
+
+.steel{
+    background-color: #b9b7cf;
+}
+
+.dragon{
+    background-color: #9b72ff;
+}
+
+.fairy{
+    background-color: #ffa8c5;
+}
+
+.pokemon .number{
+    color: black;
+    opacity: .4;
+    text-align: right;
+    font-size: .625rem;
+}
+
+.pokemon .name{
+    color: white;
+    margin-bottom: 0.25rem;
+    text-transform: capitalize;
+}
+
+.pokemon .details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .types{
+    text-transform: capitalize;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pokemon .types .type{
+    color: white;
+    text-shadow: 0 0 2px black;
+    padding: .25rem 1rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    filter: brightness(1.15);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.pokemon .details img{
+    max-width: 7rem;
+    height: 70px;
+    align-self: flex-end;
+}

@@ -1,0 +1,43 @@
+.collum2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+.pokemon{
+
+}
+
+.pokemon .types{
+    width: 60%;
+}
+
+.pokemon .types li{
+    display: inline-block;
+    width: fit-content;
+}
+
+.pokemon .name{
+    display: inline;
+    font-size: 2rem;
+}
+
+.pokemon .number{
+    font-size: 1rem;
+    color: white;
+    opacity: 1;
+}
+
+.pokemon img{
+    align-self: center;
+    margin-top: 2rem;
+    width: 12rem;
+}
