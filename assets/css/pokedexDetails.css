@@ -35,6 +35,7 @@
 .pokemon{
     max-width: 992px;
     margin: 0.5rem auto;
+    background-size: 30rem;
 }
 
 .pokemon .types{

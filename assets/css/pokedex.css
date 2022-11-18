@@ -35,6 +35,9 @@
     margin: .5rem;
     padding: 2rem 1rem;
     border-radius: 1rem;
+    background: url(../img/pokeball.png) no-repeat;
+    background-size: 6rem;
+    background-position: 100% 85%;
 }
 
 .normal{

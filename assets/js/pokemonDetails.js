@@ -36,9 +36,16 @@ function capitalize(string)
 
 function pokemonStatsToLi(pokemon)
 {
-    return pokemon.stats.map((stat) => { 
+    let html = [];
+    let total=0;
+
+    html = pokemon.stats.map((stat) => {
+        total+= stat.value;
         return `<li class="itemTitle">${stat.name}</li><li class="itemValue">${stat.value}</li>`
     })
+
+    html.push(`<li class="itemTitle">Total</li><li class="itemValue">${total}</li>`);
+    return html;
 }
 
 function pokemonTypeToHtmlLi(pokemonTypes)
@@ -52,9 +59,9 @@ function pokemonBodyHtml(pokemon)
         <h1>About</h1>
         <ol class="detailList">
             <li class="itemTitle">Height</li>
-            <li class="itemValue">${pokemon.height}</li>
+            <li class="itemValue">${pokemon.height*10} cm</li>
             <li class="itemTitle">Weight</li>
-            <li class="itemValue">${pokemon.weight}</li>
+            <li class="itemValue">${pokemon.weight*100/1000} kg</li>
             <li class="itemTitle">Abilities</li>
             <li class="itemValue">${pokemon.attacks.map((ability) => { return ability }).join(', ')}</li>
         </ol>
