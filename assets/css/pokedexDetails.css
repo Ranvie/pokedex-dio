@@ -5,15 +5,36 @@
 }
 
 .content{
-    display: flex;
-    flex-direction: column;
-    margin: .5rem;
+    position: relative;
+    top: -80px;
+    margin: auto;
     padding: 2rem 1rem;
     border-radius: 1rem;
 }
 
-.pokemon{
+.content h1{
+    margin-top: 1.25rem;
+    padding: 0;
+    font-size: 1.2rem;
+}
 
+.goBack{
+    margin-bottom: 1rem;
+}
+
+.goBack a{
+    text-decoration: none;
+    color: white;
+}
+
+.goBack a img{
+    height: 1.5rem;
+    width: 2rem;
+}
+
+.pokemon{
+    max-width: 992px;
+    margin: 0.5rem auto;
 }
 
 .pokemon .types{
@@ -31,7 +52,7 @@
 }
 
 .pokemon .number{
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: white;
     opacity: 1;
 }
@@ -40,4 +61,28 @@
     align-self: center;
     margin-top: 2rem;
     width: 12rem;
+    z-index: 1;
+}
+
+.detailList{
+    margin-left: 1rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: baseline;
+}
+
+.detailList li{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.detailList .itemTitle{
+    color: #9b9b9b;
+}
+
+.detailList .itemValue{
+
 }

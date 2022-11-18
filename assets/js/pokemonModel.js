@@ -3,6 +3,13 @@ class Pokemon
     number;
     name;
     type;
-    secondaryTypes = [];
+    types = [];
+    attacks = [];
     sprite;
+    weight;
+    height;
+    stats = [{
+        "name": "",
+        "value": 0
+    }];
 };

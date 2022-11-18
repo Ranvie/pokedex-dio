@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById("pokemonList");
 const loadMoreButton = document.getElementById("loadMoreButton");
+const pokemonLinks = document.getElementsByClassName("pokemonLink");
 const loadCards = 10;
 let startAtCard = 0;
 
@@ -11,7 +12,7 @@ function pokemonTypeToHtmlLi(pokemonTypes)
 function pokemonToHtmlLi(pokemon)
 {
     return `
-        <a href="#" class="pokemonLink">
+        <a id="${pokemon.number}" class="pokemonLink" onclick="chosenPokemon(this)">
             <li class="pokemon ${pokemon.type}">
                 <span class="number">#${pokemon.number}</span> 
                 <span class="name">${pokemon.name}</span>
@@ -48,6 +49,12 @@ function loadPokemonCards(offset, limit)
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         pokemonList.innerHTML += pokemons.map(pokemonToHtmlLi).join('');
     })
+}
+
+function chosenPokemon(sender)
+{
+    sessionStorage.setItem('loadPokemon', sender.getAttribute("id"));
+    open("assets/pages/pokemonDetails.html");
 }
 
 (function main()
